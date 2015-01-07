@@ -29,10 +29,10 @@
 
 							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
 							<ul class = "dropdown-menu">
-								<li><a href ="https://www.facebook.com/SKGProductions?ref=hl">Facebook</a></li>
-								<li><a href ="https://twitter.com/suukool">Twitter</a></li>
-								<li><a href ="https://soundcloud.com/suukool">Soundcloud</a></li>
-								<li><a href ="http://instagram.com/suukool">Instagram</a></li>
+									<li><a href ="https://www.facebook.com/SKGProductions?ref=hl" target="_blank">Facebook</a></li>
+								<li><a href="https://twitter.com/suukool" target="_blank">Twitter</a></li>
+								<li><a href="https://soundcloud.com/suukool" target="_blank">Soundcloud</a></li>
+								<li><a href="http://instagram.com/suukool" target="_blank">Instagram</a></li>
 							</ul>
 						<li><a href = "#contact" data-toggle="modal">Contact</a></li>
 					
@@ -42,21 +42,6 @@
 			</div>
 <div class = "container">
 	<div class = "row">
-
-		<div class = "col-lg-9">
-			<div class = "panel panel-default">
-				<div class = "panel-body">
-				 	<div class = "page-header">
-						 <h3>Video Projects <small>Posted on 1/7/2015</small></h3>
-					 </div>
-                    <iframe src="//www.youtube.com/embed/ZjnL8LPLCuo" frameborder="0" allowfullscreen></iframe>
-                    <iframe src="//www.youtube.com/embed/0treX_Mrjw0" frameborder="0" allowfullscreen></iframe>
-                <h2>Adobe Premiere and After Effects Projects</h2>
-                    <p>Featured above are my various video intros, projects, and experiments in cinemaphotography.</p>
-                    
-				</div>
-			</div>
-		</div>
          <div class ="col-lg-3">
            
             <div class ="list-group">
@@ -76,6 +61,21 @@
            </div>
         </div> 
         
+        <div class = "col-lg-9">
+			<div class = "panel panel-default">
+				<div class = "panel-body">
+				 	<div class = "page-header">
+						 <h3>Video Projects <small>Posted on 1/7/2015</small></h3>
+					 </div>
+                    <iframe src="//www.youtube.com/embed/ZjnL8LPLCuo" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="//www.youtube.com/embed/0treX_Mrjw0" frameborder="0" allowfullscreen></iframe>
+                <h2>Adobe Premiere and After Effects Projects</h2>
+                    <p>Featured above are my various video intros, projects, and experiments in cinemaphotography.</p>
+                    
+				</div>
+			</div>
+		</div>
+        
 	</div>
     
     
@@ -89,13 +89,17 @@
     <div  class ="input-group col-sm-4 pull-right">
     <input type ="text" class ="form-control navbar-btn" placeholder = "Enter some text">
     <span class ="input-group-btn">
-       <button href ="#search" class = "btn navbar-btn btn-primary" type="submit">Search</button>
+        <a href = "#search?" class = "btn navbar-btn btn-primary">Search</a>
     
     </span>
         </div>
     
-		<p class = "navbar-text">Do you like the website? Get Updated!</p>
-		<a href = "#" class = "navbar-btn btn-danger btn pull-left">Subscribe!</a>
+		<p class = "navbar-text">Do you like the website? Subscribe!</p>
+    <div class = "navbar-btn">
+        <div class="g-ytsubscribe" data-channel="SuuKool"></div>
+        <a href="https://twitter.com/SuuKool" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SuuKool</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
 	</div>
         </div>
 <div class = "modal fade" id = "contact" role = "dialog">
@@ -140,6 +144,7 @@
 		</div>
 	</div>
 </div>
+    <script src = "js/platform.js"></script>
     <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src ="js/bootstrap.js"></script>
 </body>
