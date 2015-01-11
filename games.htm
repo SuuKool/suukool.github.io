@@ -97,26 +97,33 @@
 <div class = "modal fade" id = "contact" role = "dialog">
 	<div class = "modal-dialog"> 
 		<div class = "modal-content">
-            <form class ="form-horizontal">                                     <div class = "modal-header">
-			         <h4>Contact Me</h4>
+            <form class="form-horizontal" role="form" method="post" action="email/index.php">                               
+                <div class = "modal-header">
+			         <h1>Contact Me</h1>
+                    <p>github.io has disallowed the POST protocol, or maybe mail() function which is understandable since Github doesn't want malicious scripts running spam-scripts. They may have disallowed the execution of PHP scripts entirely (which is the most likely reason.) Meaning without a webserver to test this particular code below you will recieve an error upon sending the email! If you want to contact me just shoot an email to:</p> 
+                    <a href="mailto:suukoolproductions@gmmail.com?Subject=Website Contact" target="_top">SuuKoolProductions@gmail.com</a>
+                      <h3 style="color:#FF6633;"><?php echo $_GET[msg];?></h3>
                 </div>
 			<div class = "modal-body">
-                
+                <fieldset>
 			     <div class="form-group">
-                     
-                <label for ="contact-name" class = "col-lg-2 control-label">Name</label>
-                <div class="col-lg-10">
+                <form name="enq" method="post" action="email/" onsubmit="return validation();">
+                
+                
+                    <label for ="contact-name" class = "col-lg-2 control-label">Name:</label>   
+                    <div class="col-lg-10">
+                    <input type="text" class="form-control" name="name" id="name" value=""  class="input-block-level" placeholder="Name" />
+                    </div>
+                </div>
                     
-                    <input type ="text" class ="form-control" id = "contact-name" placeholder ="Full Name">
-			</div>
-        </div>
+      
                 
             <div class="form-group">
                      
                 <label for ="contact-name" class = "col-lg-2 control-label">Email:</label>
                 <div class="col-lg-10">
-                    
-                    <input type ="email" class ="form-control" id = "contact-email" placeholder ="example@email.com">
+                    <input type="text" class ="form-control" name="email" id="email" value="" class="input-block-level" placeholder="example@email.com" />
+            
 			</div>
         </div>
                 <div class="form-group">
@@ -124,16 +131,25 @@
                 <label for ="contact-name" class = "col-lg-2 control-label">Message:</label>
                 <div class="col-lg-10">
                     
+                    <textarea class ="form-control" rows="11" name="message" id="message" class="input-block-level"></textarea>
+
+			</div>
                     
-                    <textarea class = "form-control" rows = "8"></textarea>
-			</div>
         </div>
-    </div>
-			<div class ="modal-footer">
+   
+                <div class ="modal-footer">
+                <div class="actions">
 			<a class = "btn btn-default" data-dismiss = "modal">Cancel</a>
-            <button class = "btn btn-primary" type="submit">Send Message</button>     
-			</div>
-		</div>
+                    <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn btn-primary" title="Click here to submit your message!" />
+                </div>
+                    </div>
+             
+                </fieldset>
+                </form>
+                 
+			
+		      </div>
+        </div>
 	</div>
 </div>
     <script src = "js/platform.js"></script>
