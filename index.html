@@ -5,8 +5,10 @@
 			<meta name="viewport" content="width=device-width, inital-scale=1.0">
 			<link href = "css/bootstrap.min.css" rel = "stylesheet">
 			<link href = "css/styles.css" rel = "stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
-<body id="pageBody">
+<body>
+ 
 	<div class ="navbar navbar-inverse navbar-static-top">
 			<div class ="container">
 
@@ -30,10 +32,13 @@
 
 							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
 							<ul class = "dropdown-menu">
-								<li><a href ="https://www.facebook.com/SKGProductions?ref=hl" target="_blank">Facebook</a></li>
-								<li><a href="https://twitter.com/suukool" target="_blank">Twitter</a></li>
-								<li><a href="https://soundcloud.com/suukool" target="_blank">Soundcloud</a></li>
-								<li><a href="http://instagram.com/suukool" target="_blank">Instagram</a></li>
+								<li><a href ="https://www.facebook.com/SKGProductions?ref=hl" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li class="divider"></li>
+								<li><a href="https://twitter.com/suukool" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                <li class="divider"></li>
+								<li><a href="https://soundcloud.com/suukool" target="_blank"><i class="fa fa-soundcloud"></i> Soundcloud</a></li>
+                                <li class="divider"></li>
+								<li><a href="http://instagram.com/suukool" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
 							</ul>
 						<li><a href = "#contact" data-toggle="modal">Contact</a></li>
 					
@@ -66,57 +71,54 @@
         </div>
 	</div>
 
-	<div class = "navbar navbar-default navbar-fixed-bottom">
+	<div class = "navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 
 <div class = "container">
     <div  class ="input-group col-sm-4 pull-right">
     <input type ="text" class ="form-control navbar-btn" placeholder = "Enter some text">
     <span class ="input-group-btn">
         <a href = "#search?" class = "btn navbar-btn btn-primary">Search</a>
-    
     </span>
+        
         </div>
+		<p class = "navbar-text">Do you like the website? Like and Subscribe!</p>
+    <p class = "navbar-text">2015 SuuKool Productions - Website Design by Hunter Raines (SuuKool)</p>
+<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FSuuKoolFans&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
     
-		<p class = "navbar-text">Do you like the website? Subscribe!</p>
-    <div class = "navbar-btn">
+    <div class = "navbar-btn pull-right">
         <div class="g-ytsubscribe" data-channel="SuuKool"></div>
         <a href="https://twitter.com/SuuKool" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SuuKool</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        
     </div>
 	</div>
         </div>
 
 
+
 <div class = "modal fade" id = "contact" role = "dialog">
 	<div class = "modal-dialog"> 
 		<div class = "modal-content">
-            <form class="form-horizontal" role="form" method="post" action="email/index.php">                               
-                <div class = "modal-header">
-			         <h1>Contact Me</h1>
-                    <p>github.io has disallowed the POST protocol, or maybe mail() function which is understandable since Github doesn't want malicious scripts running spam-scripts. They may have disallowed the execution of PHP scripts entirely (which is the most likely reason.) Meaning without a webserver to test this particular code below you will recieve an error upon sending the email! If you want to contact me just shoot an email to:</p> 
-                    <a href="mailto:suukoolproductions@gmail.com?Subject=Website Contact" target="_top">SuuKoolProductions@gmail.com</a>
-                      <h3 style="color:#FF6633;"><?php echo $_GET[msg];?></h3>
+            <form class ="form-horizontal">                                     <div class = "modal-header">
+			         <h4>Contact Me</h4>
                 </div>
 			<div class = "modal-body">
-                <fieldset>
+                
 			     <div class="form-group">
-                <form name="enq" method="post" action="email/" onsubmit="return validation();">
-                
-                
-                    <label for ="contact-name" class = "col-lg-2 control-label">Name:</label>   
-                    <div class="col-lg-10">
-                    <input type="text" class="form-control" name="name" id="name" value=""  class="input-block-level" placeholder="Name" />
-                    </div>
-                </div>
+                     
+                <label for ="contact-name" class = "col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
                     
-      
+                    <input type ="text" class ="form-control" id = "contact-name" placeholder ="Full Name">
+			</div>
+        </div>
                 
             <div class="form-group">
                      
                 <label for ="contact-name" class = "col-lg-2 control-label">Email:</label>
                 <div class="col-lg-10">
-                    <input type="text" class ="form-control" name="email" id="email" value="" class="input-block-level" placeholder="example@email.com" />
-            
+                    
+                    <input type ="email" class ="form-control" id = "contact-email" placeholder ="example@email.com">
 			</div>
         </div>
                 <div class="form-group">
@@ -124,28 +126,18 @@
                 <label for ="contact-name" class = "col-lg-2 control-label">Message:</label>
                 <div class="col-lg-10">
                     
-                    <textarea class ="form-control" rows="11" name="message" id="message" class="input-block-level"></textarea>
-
-			</div>
                     
+                    <textarea class = "form-control" rows = "8"></textarea>
+			</div>
         </div>
-   
-                <div class ="modal-footer">
-                <div class="actions">
+    </div>
+			<div class ="modal-footer">
 			<a class = "btn btn-default" data-dismiss = "modal">Cancel</a>
-                    <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn btn-primary" title="Click here to submit your message!" />
-                </div>
-                    </div>
-             
-                </fieldset>
-                </form>
-                 
-			
-		      </div>
-        </div>
+            <button class = "btn btn-primary" type="submit">Send Message</button>     
+			</div>
+		</div>
 	</div>
 </div>
-    <script src="email/validation.js" type="text/javascript"></script>
     <script src = "js/platform.js"></script>
     <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src ="js/bootstrap.js"></script>
