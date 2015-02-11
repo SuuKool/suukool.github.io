@@ -1,13 +1,46 @@
-<!DOCTYPE html>
-<html>
-	<head>
-			<title>SuuKool's Portfolio</title>
-         <meta name="viewport" content="width=device-width, initial scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="SuuKool">
-        <link rel="icon" href="#">
-        
-        <!-- Bootstrap core CSS --> 
+<!-- Author: Michael Milstead / Mode87.com
+	 for Untame.net
+	 Twitter Bootstrap Tutorial
+	 Parallax Demo, 2013
+-->
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Twitter Bootstrap Parallax Tutorial</title>
+    <!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Core Meta Data -->
+	<meta name="author" content="SuuKool">
+	<meta name="description" content="SuuKool's Offical Site Portfolio and blog.">
+	<meta name="keywords" content="music,artist,parallax,javascript,jquery,developer,twitter,suukool">
+
+	<!-- Open Graph Meta Data -->
+	<meta property="og:description" content="SuuKool's Offical Site Portfolio and blog.">
+	<meta property="og:image" content="http://suukool.github.io/img/thumbnail.png">
+	<meta property="og:site_name" content="SuuKool's Portfolio">
+	<meta property="og:title" content="SuuKool">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://wagerfield.github.io/parallax/index.html">
+
+	<!-- Twitter Card Meta Data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="http://suukool.github.io/index.html">
+	<meta name="twitter:creator" content="@SuuKool">
+	<meta name="twitter:title" content="SuuKool">
+	<meta name="twitter:description" content="SuuKool's Offical Site Portfolio and blog.">
+	<meta name="twitter:image" content="img/thumbnail.png">
+
+	<!-- Humans -->
+	<link rel="author" href="txt/humans.txt" />
+
+	<meta name="description" content="Twitter Bootstrap Parallax Tutorial with HTML5 / CSS3 / JavaScript">
+	<meta name="author" content="Untame.net">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+     <!-- Bootstrap core CSS --> 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         
         <!-- Font-Awesome core CSS --> 
@@ -15,18 +48,54 @@
         
         <!-- Custom Styles for this Site -->
         <link rel="stylesheet" href="css/styles.css" />
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-	</head>
+        <link rel="stylesheet" href="css/main.ss" />
+	<script src="js/jquery-1.6.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/init.js"></script>
+
+	<style type="text/css">
+		#intro { 
+			background: url(img/intro.png) 50% 0 fixed; 
+			height: auto;  
+			margin: 0 auto; 
+		    width: 100%; 
+		    position: relative; 
+		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		    padding: 100px 0;
+		}
+		#home { 
+			background: url(img/home.jpg) 50% 0 fixed; 
+			height: auto;  
+			margin: 0 auto; 
+		    width: 100%; 
+		    position: relative; 
+		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		    padding: 200px 0;
+		}
+		#about { 
+			background: url(img/about.png) 50% 0 fixed; 
+			height: auto;
+			margin: 0 auto; 
+		    width: 100%; 
+		    position: relative; 
+		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		    padding: 100px 0;
+		    color: #fff;
+		}
+
+		/* Non-essential demo stuff */
+		.hero-unit {
+			background-color: #fff;
+		    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+		}
+		.media-object { width: 64px; height: 64px; padding-bottom: 30px }
+	</style>
+
+</head>
+
 <body>
- 
-	<!-- NAVBAR 
-========================================= -->
-        <div class="navbar-wrapper">
-            
-            <div class="container">
-            
-                <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
                     
                     <div class="container">
                        
@@ -78,21 +147,16 @@
                     </div> <!-- End of Container -->
                     
                 </div> <!-- End of Basic Navbar -->
-                
-            </div> <!-- End of Container -->
-            
-        </div> <!-- End of Navbar-Wrapper -->
-        
-	
 
-        <div id="myCarousel" class="carousel slide">
+	<!-- Section #1  Carousel-->
+            <div id="myCarousel" class="carousel slide">
         
        
         
             <div class="carousel-inner">
                 
             <div id="0" class="item active">
-                <img src="img/slide.jpg" alt="first slide" />
+                <img src="img/slide1.jpg" alt="first slide" />
                 
                 <div class="container">
                 <div class="carousel-caption">
@@ -106,7 +170,7 @@
                 </div> <!----End of Item (active) -->
                 
                  <div id="1" class="item">
-                      <img src="img/slide1.jpg" alt="second slide" />
+                      <img src="img/slide.jpg" alt="second slide" />
                 <div class="container">
                 <div class="carousel-caption">
                     	<h1>Hello!</h1>
@@ -136,7 +200,15 @@ $(document).ready(function() {
   });
 });
 </script> <!--Carousel Script-->
-        <div class = "jumbotron">
+    
+	<section id="intro" data-speed="6" data-type="background">
+        
+		<div class="container">
+			<div class="row-fluid">
+		        <div class="span4 text-center">
+		          <img src="img/album.png">
+		        </div>
+		        <div class = "jumbotron">
 		<div class="container-fluid">
     <div class="row-fluid">
         <div class="col-lg-12">
@@ -154,29 +226,116 @@ $(document).ready(function() {
     </div>
             </div>
     </div>
-	<div class ="container"> 
-        <div class ="jumbotron">
-		  <div class ="row">
+	    	</div>
+	    	<div class="hero-unit">
+	    		<h2>New Album In The Works!</h2>
+	    		<p>Check out some of the preview tracks and more on my blog on the website, and on my soundcloud.
+                The album will be a portfolio of diffrent genres, HipHop, RnB, DnB, House, Dubstep, Electro, and Experimental.
+                In the meantime, give Ray Tube some more plays! The featured song on the album is blowing up thanks to you all.</p>
+	    	</div>
+	    </div>
+	</section>
 
-			<div class ="video col-md-12">
-                <h2>VICE Media Edit, Adobe Premiere CS6</h2>
+	<!-- Section #2 -->
+	<section id="home" data-speed="4" data-type="background">
+		<div class="container">
+			<div class="row-fluid">
+		        <div class="span4 well">
+		          	<div class ="video col-md-12">
+               
+ 			<iframe width="1280" height="690" src="https://www.youtube.com/embed/ZSQkGs3PdnE" frameborder="0" allowfullscreen></iframe>
+			</div> <h2>SuuKool - Raytube</h2>
+		          <p><a class="btn btn-success" href="https://www.youtube.com/watch?v=ZSQkGs3PdnE">View details &raquo;</a></p>
+		        </div><!-- /.span4 -->
+		      
+		        <div class="span4 well">
+		    <div class ="video col-md-12">
+       
  			<iframe src="//www.youtube.com/embed/P2FAX4t_x88" frameborder="10px" allowfullscreen></iframe>
 			</div>
+                             <h2>VICE Media Edit, Adobe Premiere CS6</h2>
+		          <p><a class="btn btn-success" href="https://www.youtube.com/watch?v=P2FAX4t_x88">View details &raquo;</a></p>
+		        </div><!-- /.span4 -->
+	    	</div>
+	    </div>
+	</section>
 
-		  </div>
-        </div>
-        <div class ="jumbotron">
-		  <div class ="row">
-
-			<div class ="video col-md-12">
-                <h2>SuuKool - Raytube</h2>
- 			<iframe width="1280" height="720" src="https://www.youtube.com/embed/ZSQkGs3PdnE" frameborder="0" allowfullscreen></iframe>
-			</div>
-
-		  </div>
-        </div>
-	</div>
-    <div class = "col-md-12">
+	<!-- Section #3 -->
+	<section id="about" data-speed="2" data-type="background">
+		<div class="container">
+            <hr>
+			<div class="row-fluid">
+		        <div class="span4">
+		          <h2>About the website</h2>
+		          <p>This website was designed by me in a bootstrap 3.0 markup, it includes a parallax which gives the 2D website a 3D feel.
+                      If you click the contact on this page it will bring up a mogal that looks really nice, but since PHP is disabled on github pages I can't use that so it's greyed out. On all of the other pages it's a link to my email. <a href="mailto:suukoolproductions?Subject=Website" target="_top">Send Mail to me!</a>
+                      I am decently familar with PHP but I can't show it off so all my forms are just kinda disabled at the moment. I'm quite pleased at the website and how it's grown into this nice portfolio. I'll keep updating my blog so don't forget to check that out!
+                    I have my resume in a rich text which you can see by clicking below.</p>
+		          <p><a class="btn btn-success" href="/txt/Hunter_Raines-_Resume.rtf" download>View Resume &raquo;</a></p>
+		        </div><!-- /.span4 -->
+		        <div class="span4">
+		         	<h2>Experience:</h2>
+		         	<div class="media">
+						<a class="pull-left">
+                            <img class="aftereffects" src="img/After_Effects.png">
+					    	<img class="premiere" src="img/Premiere_Pro.png">
+                            
+						</a>
+						<div class="media-body">
+						    <h4 class="media-heading">After Effects, Premiere Pro</h4>
+						    4 Years of experience, Pro-Grade plugings like Trapcode,Form,Twitch, RED Giant, Lots of camera knowledge.
+						</div>
+					</div>
+		         	<div class="media">
+						<a class="pull-left">
+					    	<img class="photoshop" src="img/Photoshop.png">
+						</a>
+						<div class="media-body">
+						    <h4 class="media-heading">Photoshop</h4>
+						    4 Years Graphic Design Experience
+						</div>
+					</div>
+		         	<div class="media">
+						<a class="pull-left">
+					    	<img class="icon" src="img/desktop.png">
+						</a>
+						<div class="media-body">
+						    <h4 class="media-heading">I'm IT Smart too!</h4>
+						    I have been employed in the IT field for two years by my school district, on top of doing freelance work.
+                            I can work on many operating systems and diffrent devices, troubleshoot, manage, correct whatever problems you are having.
+						</div>
+                        <hr>
+					</div>
+		        </div><!-- /.span4 -->
+		        <div class="span4">
+		          <h2>Log In</h2>
+		          <form class="form">
+					  <div class="control-group">
+					    <label class="control-label" for="inputEmail">Email</label>
+					    <div class="controls">
+					      <input type="text" id="inputEmail" placeholder="Email">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="inputPassword">Password</label>
+					    <div class="controls">
+					      <input type="password" id="inputPassword" placeholder="Password">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <div class="controls">
+					      <label class="checkbox">
+					        <input type="checkbox"> Remember me <br><br>
+					      </label>
+					      <button type="submit" class="btn btn-success">Sign in</button>
+					    </div>
+					  </div>
+					</form>
+		        </div><!-- /.span4 -->
+	    	</div>
+	    </div>
+	</section>
+<div class = "col-md-12">
         
 		<p class = "navbar-text">Do you like the website? Like and Subscribe!</p>
  <p class = "navbar-text"><i class="fa fa-copyright"></i>2015 SuuKool Productions - Website Design by Hunter Raines (SuuKool)</p>
@@ -210,10 +369,7 @@ $(document).ready(function() {
     </div>
 	</div>
         </div>
-
-
-
-<div class = "modal fade" id = "contact" role = "dialog">
+    <div class = "modal fade" id = "contact" role = "dialog">
 	<div class = "modal-dialog"> 
 		<div class = "modal-content">
             <form class ="form-horizontal">                                     <div class = "modal-header">

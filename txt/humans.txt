@@ -1,0 +1,13 @@
+/* TEAM */
+I do it by myself. 
+Developer & Designer: Hunter Raines
+Site: http://suukool.gitgub.io
+Twitter: @SuuKool
+Location: California
+
+/* SITE */
+
+Last Update: 2015/02/06
+Standards: HTML5, CSS3
+Components: jQuery, Underscore, Fastclick,Bootstrap
+Software: Brackets
