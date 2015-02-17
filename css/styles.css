@@ -110,7 +110,7 @@ body {
     height: 500px;
 }
 .indent {
-    margin-top: 80px;
+    margin-top: 125px;
     margin-bottom: 60px;
 }
 
@@ -179,4 +179,8 @@ text-shadow: 3px 4px 3px #ccc;
 ----------------------------*/
 #fg3-1 {
     margin-top: 100px;
+}
+#bannervideo {
+    margin-left 30px;
+        margin: 0 auto;
 }
